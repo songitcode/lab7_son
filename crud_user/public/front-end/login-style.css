@@ -18,11 +18,11 @@ input[name="email"] {
     height: 400px;
 }
 
-input[name='password'] {
+input[name="password"] {
     margin-left: 7px;
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
     margin-top: 20px;
 }
 

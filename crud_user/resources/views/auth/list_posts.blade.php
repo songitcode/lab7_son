@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/front-end/article-style.css">
 <style>
 </style>
-@section('content_list_favorite')
+@section('content_list_posts')
     <section>
         <h1>Danh sách sở thích</h1>
         <div class="box-favorite">
@@ -13,11 +13,11 @@
                         <th>Name</th>
                         <th>Description</th>
                     </tr>
-                    @foreach ($sothich as $item)
+                    @foreach ($baiViet as $item)
                         <tr>
-                            <td>{{ $item->favorite_id }}</td>
-                            <td>{{ $item->favorite_name }}</td>
-                            <td>{{ $item->favorite_description }}</td>
+                            <td>{{ $item->post_id }}</td>
+                            <td>{{ $item->post_name }}</td>
+                            <td>{{ $item->post_description }}</td>
                         </tr>
                     @endforeach
                 </table>

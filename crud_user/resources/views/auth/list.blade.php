@@ -34,9 +34,15 @@
                                     {{-- {!! $find->favorities !!} --}}
                                 </th>
                                 <th>
-                                    <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
-                                    <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
-                                    <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
+                                    @if ($user->posts->isEmpty())
+                                        <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
+                                        <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
+                                        <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
+                                    @else
+                                        <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
+                                        <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a>
+                                        <a href="#" class="btn-delete">Delete</a>
+                                    @endif
                                 </th>
                             </tr>
                         @endforeach
@@ -45,4 +51,11 @@
             </div>
         </div>
     </main>
+    <script>
+        const btnDelete = document.querySelector('.btn-delete');
+
+        btnDelete.addEventListener('click', function() {
+            window.alert('Không thể xóa vì người này có bài viết');
+        });
+    </script>
 @endsection

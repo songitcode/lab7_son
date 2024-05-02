@@ -24,5 +24,11 @@ class PostsSeeder extends Seeder
             'post_name' => 'Chạy bộ đúng cách',
             'post_description' => 'Việc chạy bộ đúng cách sẽ hạn chế chấn thương',
         ]);
+
+        DB::table('posts')->insert([
+            'user_id' => 1,
+            'post_name' => 2,
+            'post_description' => 3,
+        ]);
     }
 }

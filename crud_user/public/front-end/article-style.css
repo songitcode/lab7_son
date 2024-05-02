@@ -1,12 +1,23 @@
-.box-favorite {
-    border: 1px solid #000;
-    width: 100%;
-    height: auto;
-}
-
 .chua-danh-sach {
-    border: 1px solid #000;
-    width: fit-content;
     padding: 15px;
     margin: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+td {
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.box-favorite {
+    display: flex;
+    justify-content: center;
 }

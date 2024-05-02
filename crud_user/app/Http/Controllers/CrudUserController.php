@@ -81,10 +81,10 @@ class CrudUserController extends Controller
 
         // Xử lý lưu ảnh vào thư mục imgs
         if ($request->hasFile('photo')) {
-            $image = $request->file('photo');
-            $imageName = uniqid() . '.' . $image->extension(); // Sử dụng uniqid() để tạo tên tệp duy nhất
-            $image->storeAs('imgs/', $imageName, 'public'); // Lưu tệp vào thư mục imgs với tên duy nhất
-            $data['photo'] = $imageName; // Lưu tên tệp vào cơ sở dữ liệu
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;//
+            $file->move('imgs/', $filename);
         }
 
 

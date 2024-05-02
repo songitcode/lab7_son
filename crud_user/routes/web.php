@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CrudUserController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,10 @@ Route::get('registration', [CrudUserController::class, 'registration'])->name('u
 Route::post('create', [CrudUserController::class, 'postUser'])->name('user.postUser');
 
 Route::get('read', [CrudUserController::class, 'readUser'])->name('user.readUser');
+
+// ds-so-thich (ten dat tren trang web) name (dat nhu nao cung duoc)
+Route::get('ds-so-thich', [FavoriteController::class, 'list'])->name('favorite.list');
+Route::get('ds-bai-viet', [PostController::class, 'listPosts'])->name('posts.listPosts');
 
 // Fake hacker
 

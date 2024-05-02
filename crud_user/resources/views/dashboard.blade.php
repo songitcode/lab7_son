@@ -25,6 +25,12 @@
                         <li>
                             <a href="{{ route('signout') }}"> | Đăng Xuất</a>
                         </li>
+                        <li>
+                            <a href="{{ asset('ds-so-thich') }}"> | Danh sách sở thích</a>
+                        </li>
+                        <li>
+                            <a href="{{ asset('ds-bai-viet') }}"> | Danh sách bài viết</a>
+                        </li>
                     @endguest
                 </ul>
             </div>
@@ -33,10 +39,12 @@
     <div class="content-yield">
         @yield('content')
         @yield('content_update')
+        @yield('content_list_favorite')
+        @yield('content_list_posts')
     </div>
 
     <footer>
-        <h5 class="text">Lập trình web be2 by team J</h5>
+        <h5 class="text">Lập trình web be2 lab7 Sơn Nguyễn</h5>
     </footer>
 
 </body>

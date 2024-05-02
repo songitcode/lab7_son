@@ -28,5 +28,13 @@ class FavoriteSeeder extends Seeder
             'favorite_name' => 'Xem phim',
             'favorite_description' => 'Tôi rất thích xem phim hoạt hình',
         ]);
+        DB::table('favorities')->insert([
+            'favorite_name' => 'Xem phim',
+            'favorite_description' => 'Tôi rất thích xem phim hoạt hình',
+        ]);
+        DB::table('favorities')->insert([
+            'favorite_name' => 'Xem phim',
+            'favorite_description' => 'Tôi rất thích xem phim hoạt hình',
+        ]);
     }
 }

@@ -22,5 +22,15 @@ class ProfileSeeder extends Seeder
             'address' => 'The official instagram of the City of Orem'
         ]);
 
+        DB::table('user_profile')->insert([
+            'user_id' => 4,
+            'first_name' => 'Thu',
+            'last_name' => 'Xem',
+            'sex' => 1, //O: male, 1: female, 2: other
+            'phone' => '213456789',
+            'address' => 'O dau con lau moi noi'
+        ]);
+
+
     }
 }
