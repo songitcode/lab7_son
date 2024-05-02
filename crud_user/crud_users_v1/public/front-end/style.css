@@ -1,0 +1,43 @@
+footer {
+    border: 1px solid #000;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    margin: 15px;
+}
+
+
+.nav-bar {
+    border: 1px solid #000;
+    margin: 15px;
+
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+li {
+    margin: 0 10px 0 10px ;
+}
+
+.content-yield {
+    margin: 100px;
+}
+
+
